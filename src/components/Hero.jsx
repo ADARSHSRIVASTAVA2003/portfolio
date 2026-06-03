@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="hero-meta">
           <span>Lucknow, Uttar Pradesh</span>
           <span>1.5+ years experience</span>
-          <span>Remote</span>
+         
         </div>
         <div className="hero-buttons">
           <Link to="/projects" className="btn btn-primary">

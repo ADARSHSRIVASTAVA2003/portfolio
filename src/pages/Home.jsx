@@ -24,7 +24,7 @@ export default function Home() {
             <div className="timeline-header">
               <div>
                 <h3>Full-Stack Developer</h3>
-                <p>Sprinix Technolabs - Lucknow, Remote</p>
+                <p>Sprinix Technolabs - Lucknow</p>
               </div>
               <span>Jan 2024 - Present</span>
             </div>

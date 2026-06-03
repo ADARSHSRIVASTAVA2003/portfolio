@@ -5,7 +5,7 @@
   justify-content: center;
   text-align: center;
   padding: 5rem 2rem 4rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: var(--bg);
   position: relative;
   overflow: hidden;
 }
@@ -17,7 +17,7 @@
   right: -200px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  background: var(--accent-bg);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -29,7 +29,7 @@
   left: -200px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+  background: var(--accent-bg);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -43,16 +43,13 @@
 .hero h1 {
   font-size: clamp(2.8rem, 7vw, 5.8rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-h);
   animation: slideInDown 1s ease-out;
 }
 
 .hero p {
   font-size: 1.3rem;
-  color: #6b7280;
+  color: var(--text);
   margin-bottom: 1.5rem;
   animation: slideInUp 1s ease-out 0.2s both;
 }
@@ -78,27 +75,28 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #6366f1, #ec4899);
-  color: white;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 4px 15px var(--shadow);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 25px var(--shadow);
+  opacity: 0.9;
 }
 
 .btn-secondary {
-  background: white;
-  color: #6366f1;
-  border: 2px solid #6366f1;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15);
+  background: var(--bg);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 15px var(--shadow);
 }
 
 .btn-secondary:hover {
-  background: #f8f9fa;
+  background: var(--bg-soft);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 8px 25px var(--shadow);
 }
 
 @keyframes slideInDown {
