@@ -52,8 +52,8 @@ export default function Projects() {
         <h2 className="section-title">My Projects</h2>
         <div className="skills-grid">
           {projectsData.map((project) => (
-            <div key={project.id} className="skill-category">
-              <h3>{project.title}</h3>
+            <div key={project.id} className="skill-card">
+              <h3 className="skill-card-title">{project.title}</h3>
               <p className="project-description">
                 {project.description}
               </p>

@@ -21,11 +21,170 @@
   color: var(--accent);
 }
 
+/* ── Skills page header ── */
+.skills-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.skills-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent) 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.skills-subtitle {
+  color: var(--text);
+  font-size: 1rem;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ── Search bar ── */
+.skills-search-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.skills-search {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text);
+  pointer-events: none;
+}
+
+.skills-input {
+  width: 100%;
+  padding: 0.85rem 2.8rem;
+  background: var(--navbar-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  color: var(--text-h);
+  font: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  box-sizing: border-box;
+}
+
+.skills-input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.skills-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-bg);
+}
+
+.search-clear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.2rem;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.search-clear:hover {
+  opacity: 1;
+}
+
+.skills-empty {
+  text-align: center;
+  color: var(--text);
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* ── Skills grid ── */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
   margin-bottom: 3rem;
+}
+
+/* ── Skill category card ── */
+.skill-card {
+  background: var(--navbar-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 14px;
+  padding: 1.6rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px var(--shadow);
+}
+
+.skill-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--accent-border);
+}
+
+/* ── Skill pills ── */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+  background: var(--bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--text-h);
+  font-weight: 500;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.skill-pill:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.skill-pill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  letter-spacing: -0.03em;
 }
 
 .intro-panel,
@@ -123,52 +282,6 @@
   margin-top: 1.5rem;
 }
 
-.skill-category {
-  background: var(--navbar-bg);
-  border: 1px solid var(--accent-border);
-  padding: 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
-.skill-category:hover {
-  background: var(--accent-bg);
-  border-color: var(--accent);
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(170, 59, 255, 0.2);
-}
-
-.skill-category h3 {
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.skill-list {
-  list-style: none;
-}
-
-.skill-item {
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-h);
-}
-
-.skill-item::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
-  margin-right: 0.5rem;
-}
 
 .skill-bar {
   margin: 2rem 0;
