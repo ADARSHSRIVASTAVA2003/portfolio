@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from './context/ThemeProvider';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -28,6 +29,7 @@ function App() {
           </svg>
           <span className="wa-float-label">Chat with me</span>
         </a>
+        <Analytics />
       </Router>
     </ThemeProvider>
   );
