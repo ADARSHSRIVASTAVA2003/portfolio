@@ -40,6 +40,17 @@
   max-width: 920px;
 }
 
+.hero-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 30px var(--accent-bg);
+  margin-bottom: 1.5rem;
+  animation: slideInDown 1s ease-out;
+}
+
 .hero h1 {
   font-size: clamp(2.8rem, 7vw, 5.8rem);
   margin-bottom: 1rem;

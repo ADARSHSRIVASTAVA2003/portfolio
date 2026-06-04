@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import profileImg from './profile.jpg';
 import '../styles/hero.css';
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
+        <img src={profileImg} alt="Adarsh Srivastava" className="hero-avatar" />
         <p className="hero-eyebrow">Full-Stack Software Developer</p>
         <h1>Adarsh Srivastava</h1>
         <p>
