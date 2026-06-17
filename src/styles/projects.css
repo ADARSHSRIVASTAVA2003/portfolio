@@ -1,0 +1,230 @@
+/* ── Project card enhancements ── */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-live {
+  border-color: var(--accent);
+  background: linear-gradient(
+    135deg,
+    var(--navbar-bg) 0%,
+    var(--accent-bg) 100%
+  );
+}
+
+.project-live::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #6366f1, var(--accent));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-card-header .skill-card-title {
+  margin-bottom: 1rem;
+}
+
+/* ── Live badge ── */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #22c55e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0); }
+}
+
+/* ── Visit link button ── */
+.project-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: gap 0.2s, opacity 0.2s;
+}
+
+.project-live-link:hover {
+  gap: 0.75rem;
+  opacity: 0.8;
+}
+
+.project-live-link svg {
+  transition: transform 0.2s;
+}
+
+.project-live-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ── Sprinix Enterprise Showcase ── */
+.sprinix-showcase {
+  background: var(--navbar-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sprinix-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #6366f1, #a855f7, var(--accent));
+  background-size: 300% 100%;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+.sprinix-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sprinix-kicker {
+  display: inline-block;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.sprinix-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-h);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.sprinix-subtitle {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.sprinix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.sprinix-feature {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.sprinix-feature:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.sprinix-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+.sprinix-feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 0.4rem;
+}
+
+.sprinix-feature-desc {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.sprinix-tags {
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .sprinix-showcase {
+    padding: 1.5rem;
+  }
+
+  .sprinix-grid {
+    grid-template-columns: 1fr;
+  }
+}
